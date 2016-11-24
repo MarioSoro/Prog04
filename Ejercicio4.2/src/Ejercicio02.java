@@ -16,7 +16,7 @@ public class Ejercicio02 {
 		
 		if(frase.length()<=80){
 		
-			while(posicion<frase.length()){
+			/*while(posicion<frase.length()){
 			
 			caracter=frase.charAt(posicion);
 			
@@ -28,9 +28,25 @@ public class Ejercicio02 {
 			}
 			posicion++;
 		}
+		}*/
+			
+			
+			
+			for(posicion=0;posicion<frase.length();posicion++){
+			caracter=frase.charAt(posicion);
+			
+			if (caracter>='a'&& caracter<='z'){
+				contadorminusculas++;
+			}
+			if(caracter>='A'&& caracter<='Z'){
+				contadormayusculas++;
+			}
+			}
+			
 		}
 				System.out.println(contadormayusculas);
 				System.out.println(contadorminusculas);
 		
 	}
 }
+

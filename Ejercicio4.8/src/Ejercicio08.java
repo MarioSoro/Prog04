@@ -30,9 +30,9 @@ public class Ejercicio08 {
 		for(i=0;i<frase.length(); i++){
 				if (frase.charAt(i) >= 'A' && frase.charAt(i) <= 'Z') {
 	                if ((frase.charAt(i) + clave) > 'Z') {
-	                    cifrado +=((char) (frase.charAt(i) + clave - 26));
+	                    cifrado =((char) (frase.charAt(i) + clave - 26))+cifrado;
 	                } else {
-	                    cifrado +=((char) (frase.charAt(i) + clave));
+	                    cifrado =((char) (frase.charAt(i) + clave))+cifrado;
 	                }
 	            }
 	        }
