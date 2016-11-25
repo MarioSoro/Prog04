@@ -30,13 +30,36 @@ public class Ejercicio08 {
 		for(i=0;i<frase.length(); i++){
 				if (frase.charAt(i) >= 'A' && frase.charAt(i) <= 'Z') {
 	                if ((frase.charAt(i) + clave) > 'Z') {
-	                    cifrado =((char) (frase.charAt(i) + clave - 26))+cifrado;
+	                    cifrado =cifrado+((char) (frase.charAt(i) + clave - 26));
 	                } else {
-	                    cifrado =((char) (frase.charAt(i) + clave))+cifrado;
+	                    cifrado =cifrado+((char) (frase.charAt(i) + clave));
 	                }
 	            }
 	        }
 	System.out.println("Cadena cifrada con clave = " + clave + " Este es su texto cifrado "+cifrado);
+	System.out.println("");
+
+		Scanner t1= new Scanner (System.in);
+		String frase1, cifrado1;
+		int clave1=0,i1;
+		
+		System.out.println("Introduzca su frase codificada ");
+		frase1=t1.nextLine();
+		System.out.println("Introduzca la clave con la que se descodificará el texto ");
+		clave1=t1.nextInt();
+		clave1= clave1 % 26;
+		cifrado1="";
+			for(i1=0;i1<frase1.length(); i1++){
+				if (frase1.charAt(i1) >= 'A' && frase1.charAt(i1) <= 'Z') {
+	                if ((frase1.charAt(i1) - clave1) < 'A') {
+	                    cifrado1+=((char) (frase1.charAt(i1) - clave1 + 26));
+	                } else {
+	                    cifrado1+=((char) (frase1.charAt(i1) - clave1));
+	                }
+	            }
+	        }
+
+	System.out.println("Cadena cifrada con clave = " + clave + " Este es su texto cifrado "+cifrado1);
 
 }
 }
